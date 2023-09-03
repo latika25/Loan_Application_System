@@ -2,7 +2,7 @@ from django.urls import path
 # from . import views
 from django.contrib import admin
 from django.urls import path
-from loan_app.views import signup_custom,home,login,view_balance_sheet,delete_balance_sheet,edit_profile,balance_list,loan_application,application_success,requests_list,signout,profile
+from loan_app.views import signup_custom,home,login,view_balance_sheet,delete_balance_sheet,edit_profile,loan_application,application_success,requests_list,signout,profile
 
 urlpatterns = [
     # path('apply/', views.loan_application, name='loan_application'),
@@ -15,7 +15,7 @@ urlpatterns = [
    path('edit/' ,edit_profile , name='edit_profile'), 
    path('signup/' , signup_custom ), 
    path('requests/' , requests_list,name='requests' ), 
-   path('balance_sheet/' , balance_list,name='balance_sheet' ), 
+   # path('balance_sheet/' , balance_list,name='balance_sheet' ), 
    path('requests/show_balance_sheet/<int:id>/',view_balance_sheet,name='view_balance_sheet'),
    path('requests/delete_balance_sheet/<int:id>/',delete_balance_sheet,name='view_balance_sheet'),
 #    path('add-todo/' , add_todo ), 

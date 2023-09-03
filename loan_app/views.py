@@ -75,36 +75,6 @@ def view_balance_sheet(request, id):
     balance_sheet_entries = BalanceSheetEntry.objects.filter(loan_application=loan_application)
     return render(request, 'balance_sheet.html', {'loan_application': loan_application, 'balance_sheet_entries': balance_sheet_entries})
 
-def balance_list(request):
-    print("user:",request.user)
-    if request.user.is_authenticated:
-        user = request.user
-        print("user after :",user)
-        todos=[]
-        form = BalanceSheetEntryForm()
-        # todos = BalanceSheetEntry.objects.filter(user = user).order_by('year')
-        # print("todos:",todos)
-        loan_application = LoanApplication.objects.filter(user = user)
-        todos=BalanceSheetEntry.objects.all()
-        loan_application = get_object_or_404(LoanApplication, pk=loan_application_id)
-        balance_sheet_entries = BalanceSheetEntry.objects.filter(loan_application=loan_application)
-        for r in todos:
-            r_ba=r.LoanApplication.objects.all()
-            for a in r_ba:
-                print("a=",a)
-            print(r.id)
-            print(r.__dict__)
-        # print("loan application=",loan_application.id)
-            # todo=(BalanceSheetEntry.objects.filter(id=4))
-            # print(todo.__dict__)
-            # todos.append(todo.__dict__)
-            # todos.append(todo)
-            # print(todos)
-        # return HttpResponse("BalanceSheet")
-        for t in todos:
-            print("year=",t.__dict__)
-        return render(request , 'balance_sheet.html' , context={'form' : form , 'todos' : todos})
-
 def login(request):
     if request.method == 'GET':
         form1 = AuthenticationForm()

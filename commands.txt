@@ -1,0 +1,6 @@
+sudo docker build --tag latika25/loan-application:0.1 .
+sudo docker images -> to list down the images
+sudo docker ps -a ->to list the container
+sudo docker run --publish 8000:8000  latika25/loan-application:0.1 -->to run the container
+sudo docker login
+sudo docker push latika25/loan-application:0.1
