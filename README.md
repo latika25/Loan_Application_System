@@ -19,9 +19,9 @@ The Application contains the following functionalities:
 
 5. My Applications -> this contains all the applications by the user till now witht their Pre Assessment value given by Decesion Engine. This also gives the option to show the balance sheet and withdraw the appliation if any.
    
-7. Balance Sheet Details Page
+6. Balance Sheet Details Page
    
-9. My Profile
+7. My Profile
     
-11. Update the Profile 
+8. Update the Profile 
 
