@@ -1,10 +1,10 @@
 # Loan_Application_System
 Loan_Application_System using django
 ## To run the application through Docker use the following commands:
-### pull the Docker image  
-docker pull latika25/loan-application:0.1
-### Start the container from this image
-sudo docker run --publish 8000:8000  latika25/loan-application:0.1 
+### 1. Pull the Docker image  
+       docker pull latika25/loan-application:0.1
+### 2. Start the container from this image
+       docker run --publish 8000:8000  latika25/loan-application:0.1 
 
 ## Application Details
 
