@@ -1,0 +1,65 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'profile.css' %}">
+
+<div class="containter pt-4">
+  <div class="col-lg-5 shadow  mx-auto p-0">
+    <div class="alert alert-success">
+      <h2>Profile Details</h2>
+    </div>
+    <div class="p-4">
+      
+      <form method="post"  >
+        {% csrf_token %}
+        <div class="form-group">
+
+          <label for="username">Username:</label>
+        <input type="text" class="form-control" value={{username}} id="username" name="username" >
+        </div>
+        
+        <br>
+        <div class="form-group">
+          {% if email %}
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" value={{email}} id="email" name="email" >
+          {% else %}
+          <label for="email">Email:</label>
+          <input type="email"class="form-control" value='' id="email" placeholder="Add your Email" name="email" >
+          {% endif %}
+        </div>
+        
+        <br>
+        <div class="form-group">
+          {% if first_name %}
+        <label for="first_name">First Name:</label>
+        <input type="text"class="form-control" value={{first_name}} id="first_name" name="first_name" >
+        {% else %}
+        <label for="first_name">First Name:</label>
+        <input type="text" class="form-control" value='' id="first_name" placeholder="Add your first name" name="first_name" >
+        {% endif %}
+
+        </div>
+        
+        <br>
+
+        <div>
+          {% if last_name %}
+          <label for="last_name">First Name:</label>
+          <input type="text" class="form-control" value={{last_name}} id="last_name" name="last_name" >
+          {% else %}
+          <label for="last_name">First Name:</label>
+          <input type="text"class="form-control" value='' id="last_name" placeholder="Add your last name" name="last_name" >
+          {% endif %}
+        </div>
+        
+        <br>
+        <input class="btn btn-success" type="submit" value="Update Details">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+

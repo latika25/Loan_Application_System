@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div>
+    <div class="container pt-4">
+      <div class="row  p-0 mt-4">
+        <div class="col-xl-12 mx-auto shadow p-0">
+          <div class="alert alert-info">
+            <!-- <h2></h2> -->
+            <h1>Balance Sheet for {{ loan_application.business_name }}</h1>
+          </div>
+          
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Year</th>
+                      <th>Month</th>
+                      <th>Profit/Loss</th>
+                      <th>Assets Value</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for entry in balance_sheet_entries %}
+                  <tr>
+                      <td>{{ entry.year }}</td>
+                      <td>{{ entry.month }}</td>
+                      <td>{{ entry.profit_or_loss }}</td>
+                      <td>{{ entry.assets_value }}</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock %}

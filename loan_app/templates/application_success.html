@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'profile.css' %}">
+<div class="container pt-4">
+  <div class="col-lg-12 mx-auto shadow p-0 mt-4">
+    <div class="alert alert-info">
+        <h1>Application Submitted Successfully</h1>
+    </div>
+    <div class="p-4 profile_table">
+        <p>Your pre-assessment value is: {{ pre_assessment }}</p>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}
